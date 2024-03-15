@@ -1,0 +1,258 @@
+@charset 'UTF-8';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Source Sans Pro;
+  scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 15px;
+    position: fixed;
+    width: 100%;
+    /* max-width: 1024px; */
+    background-color: white;
+}
+
+header h3 {
+    font-weight: normal;
+    font-size: 24px;
+    color: black;
+}
+
+header span {
+    color: #067ba2;
+}
+
+header a {
+    color: #524949;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Banner principal */
+.banner {
+    background-image: url(assets/.//img-fundo.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+  
+    color: white;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner div {
+    background-color: #077a5194;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    padding: 40px 20px 35px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.banner div h1 {
+    font-size: 8vh;
+    text-align: center;
+}
+
+.banner div p {
+  font-size: 4vh;
+}
+
+.limitar-largura {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bem-vindo .limitar-largura, .rota .limitar-largura, .sobre .limitar-largura {
+    padding-block: 60px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    max-width: 1124px;
+}
+
+.bem-vindo h2, .rota h2, .sobre h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #524949;
+  margin-bottom: 10px;
+}
+
+
+.bem-vindo p, .rota p, .sobre p {
+  font-size: 17px;
+  color: #524949;
+}
+
+.quartos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 35px;
+}
+
+.quartos img {
+    width: 340px;
+    height: 211px;
+}
+
+figure:hover, .quarto:hover {
+    transform: scale(1.2);
+    transition: 1.2s;
+}
+
+.legenda-1::after, .legenda-2::after, .legenda-3::after {
+    /* content: ""; */
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 550;
+    color: #524949;
+    text-transform: uppercase;
+    padding-block: 18px;
+    border-bottom: 2px solid #004616c7;
+}
+
+.legenda-1::after {
+  content: "quarto de solteiro";
+}
+
+.legenda-2::after {
+  content: "quarto de Casal";
+}
+
+.legenda-3::after {
+  content: "Quarto Família";
+}
+
+iframe {
+  width: 100%;
+  height: 65vh;
+}
+
+.informações-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    color: #524949;
+    padding-block: 50px;
+    width: 100%;
+}
+
+.informações-principal img {
+  width: 120px;
+  height: 125px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 9px;
+    width: 535px;
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 18px;
+}
+
+footer {
+  color: white;
+  background-color: #49997d;
+}
+
+footer .limitar-largura {
+    padding: 25px 3px;
+    border-bottom: 2px solid #466e4873;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 40px;
+}
+
+.contato img {
+    width: 40px;
+    height: 40px;
+}
+
+.contato div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* width: 23%; */
+}
+
+.credits {
+    text-align: center;
+    font-weight: bold;
+    padding-block: 16px;
+}
+
+@media (max-width: 515px) {
+  .banner div {
+    width: 80%;
+  }
+  .bem-vindo p {
+    padding-left: 10px;
+  }
+  h2 {
+    font-size: 33px;
+  }
+
+  footer h2 {
+    font-size: 30px;
+  }
+}
+
+@media  (max-width: 1000px) {
+  .contato {
+    flex-direction: column;
+  }
+
+  .info {
+    gap: 10%;
+  }
+
+  .informações-principal {
+    padding-inline: 6%;
+  }
+  
+}
